@@ -1,0 +1,494 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local UI = Instance.new("ScreenGui")
+local UI_2 = Instance.new("Frame")
+local BackGround = Instance.new("Frame")
+local Container = Instance.new("Frame")
+local Mod = Instance.new("TextButton")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Padding = Instance.new("UIPadding")
+local Admin = Instance.new("TextButton")
+local Headadmin = Instance.new("TextButton")
+local owner = Instance.new("TextButton")
+local Made = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local UnderLine = Instance.new("Frame")
+local Toggle = Instance.new("TextButton")
+local Window = Instance.new("TextLabel")
+
+--Properties:
+
+UI.Name = "UI"
+UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+UI_2.Name = "UI"
+UI_2.Parent = UI
+UI_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI_2.BorderSizePixel = 0
+UI_2.Position = UDim2.new(0, 15, 0, 15)
+UI_2.Size = UDim2.new(0, 391, 0, 30)
+
+BackGround.Name = "BackGround"
+BackGround.Parent = UI_2
+BackGround.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BackGround.BorderSizePixel = 0
+BackGround.Position = UDim2.new(0, 0, 1, 0)
+BackGround.Size = UDim2.new(0, 190, 0, 200)
+
+Container.Name = "Container"
+Container.Parent = UI_2
+Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0, 0, 1, 0)
+Container.Size = UDim2.new(0, 391, 0, 200)
+
+Mod.Name = "Mod"
+Mod.Parent = Container
+Mod.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mod.BackgroundTransparency = 1.000
+Mod.Size = UDim2.new(0, 200, 0, 50)
+Mod.Font = Enum.Font.SourceSans
+Mod.Text = "Mod"
+Mod.TextColor3 = Color3.fromRGB(255, 0, 0)
+Mod.TextSize = 25.000
+Mod.TextWrapped = true
+Mod.TextXAlignment = Enum.TextXAlignment.Left
+
+UIGridLayout.Parent = Container
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
+
+Padding.Name = "Padding"
+Padding.Parent = Container
+Padding.PaddingLeft = UDim.new(0, 5)
+Padding.PaddingTop = UDim.new(0, 5)
+
+Admin.Name = "Admin"
+Admin.Parent = Container
+Admin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Admin.BackgroundTransparency = 1.000
+Admin.Size = UDim2.new(0, 200, 0, 50)
+Admin.Font = Enum.Font.SourceSans
+Admin.Text = "Admin"
+Admin.TextColor3 = Color3.fromRGB(255, 170, 0)
+Admin.TextSize = 25.000
+Admin.TextWrapped = true
+Admin.TextXAlignment = Enum.TextXAlignment.Left
+
+Headadmin.Name = "Headadmin"
+Headadmin.Parent = Container
+Headadmin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Headadmin.BackgroundTransparency = 1.000
+Headadmin.Size = UDim2.new(0, 200, 0, 50)
+Headadmin.Font = Enum.Font.SourceSans
+Headadmin.Text = "HeadAdmin"
+Headadmin.TextColor3 = Color3.fromRGB(255, 255, 0)
+Headadmin.TextSize = 25.000
+Headadmin.TextWrapped = true
+Headadmin.TextXAlignment = Enum.TextXAlignment.Left
+
+owner.Name = "owner"
+owner.Parent = Container
+owner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+owner.BackgroundTransparency = 1.000
+owner.Size = UDim2.new(0, 200, 0, 50)
+owner.Font = Enum.Font.SourceSans
+owner.Text = "Owner"
+owner.TextColor3 = Color3.fromRGB(85, 255, 127)
+owner.TextSize = 25.000
+owner.TextWrapped = true
+owner.TextXAlignment = Enum.TextXAlignment.Left
+
+Made.Name = "?Made"
+Made.Parent = Container
+Made.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Made.BackgroundTransparency = 1.000
+Made.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Made.BorderSizePixel = 0
+Made.Position = UDim2.new(0, 0, 0.461538464, 0)
+Made.Size = UDim2.new(0, 180, 0, 149)
+Made.Font = Enum.Font.SourceSans
+Made.Text = "Made by Banana!1!1!"
+Made.TextColor3 = Color3.fromRGB(255, 255, 255)
+Made.TextSize = 26.000
+
+TextLabel.Parent = Container
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Fck!!!1!1!1!1!!!!11!1"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 27.000
+
+UnderLine.Name = "UnderLine"
+UnderLine.Parent = UI_2
+UnderLine.BackgroundColor3 = Color3.fromRGB(255, 25, 25)
+UnderLine.BorderSizePixel = 0
+UnderLine.Position = UDim2.new(0, 0, 1, -1)
+UnderLine.Size = UDim2.new(1, 0, 0, 1)
+
+Toggle.Name = "Toggle"
+Toggle.Parent = UI_2
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BackgroundTransparency = 1.000
+Toggle.Position = UDim2.new(1, -25, 0, 0)
+Toggle.Size = UDim2.new(0, 25, 1, 0)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "-"
+Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
+Toggle.TextSize = 17.000
+
+Window.Name = "Window"
+Window.Parent = UI_2
+Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Window.BackgroundTransparency = 1.000
+Window.Size = UDim2.new(0.868421078, 0, 1, 0)
+Window.Font = Enum.Font.SourceSans
+Window.Text = "Banana's HD FE SS.avi"
+Window.TextColor3 = Color3.fromRGB(255, 0, 4)
+Window.TextSize = 17.000
+
+-- Scripts:
+
+local function PPXBB_fake_script() -- Mod.Script 
+	local script = Instance.new('Script', Mod)
+
+	function Click(mouse)
+	
+		-- << CONFIGURATION >>
+		local rank = "Mod"
+		local rankType = "Perm" -- "Temp", "Perm" or "Per". For more info, visit: https://devforum.roblox.com/t/HD/266932
+		local successColor = Color3.fromRGB(0,255,0)
+		local errorColor = Color3.fromRGB(255,0,0)
+	
+	
+	
+		-- << SERVICES/VARIABLES >>
+		local players = game:GetService("Players")
+		local tweenService = game:GetService("TweenService")
+		local debris = game:GetService("Debris")
+		local hdMain = require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain()
+		local hd = hdMain:GetModule("API")
+		local rankId = tonumber(rank) or hd:GetRankId(rank)
+		local rankName = hd:GetRankName(rankId)
+	
+	
+	
+	
+		--Check rank is lower than giver rank
+		local plrRankId, plrRankName, plrRankType = hd:GetRank(player)
+		local newColor = errorColor
+		if plrRankId < rankId then
+			--Give rank
+			hd:SetRank(player, rankId, rankType)
+			newColor = successColor
+		else
+			local errorMessage = "Your rank is already higher than '"..rankName.."'!"
+			if plrRankId == rankId then
+				errorMessage = "You've already been ranked to '"..rankName.."'!"
+			end
+			hd:Error(player, errorMessage)
+		end
+	
+	
+		--Success effect
+		if newColor == successColor then
+			local hrp = character:FindFirstChild("HumanoidRootPart")
+			if hrp and particles then
+				local particlesClone = particles:Clone()
+				debris:AddItem(particlesClone, 3)
+				particlesClone.Parent = hrp
+				for _, effect in pairs(particlesClone:GetChildren()) do
+					effect:Emit(2)
+				end
+			end
+		end
+	
+	
+	
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+	end
+	
+end
+coroutine.wrap(PPXBB_fake_script)()
+local function NIJD_fake_script() -- Admin.Script 
+	local script = Instance.new('Script', Admin)
+
+	function Click(mouse)
+	
+		-- << CONFIGURATION >>
+		local rank = "Admin"
+		local rankType = "Perm" -- "Temp", "Perm" or "Per". For more info, visit: https://devforum.roblox.com/t/HD/266932
+		local successColor = Color3.fromRGB(0,255,0)
+		local errorColor = Color3.fromRGB(255,0,0)
+	
+	
+	
+		-- << SERVICES/VARIABLES >>
+		local players = game:GetService("Players")
+		local tweenService = game:GetService("TweenService")
+		local debris = game:GetService("Debris")
+		local hdMain = require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain()
+		local hd = hdMain:GetModule("API")
+		local rankId = tonumber(rank) or hd:GetRankId(rank)
+		local rankName = hd:GetRankName(rankId)
+	
+	
+	
+	
+		--Check rank is lower than giver rank
+		local plrRankId, plrRankName, plrRankType = hd:GetRank(player)
+		local newColor = errorColor
+		if plrRankId < rankId then
+			--Give rank
+			hd:SetRank(player, rankId, rankType)
+			newColor = successColor
+		else
+			local errorMessage = "Your rank is already higher than '"..rankName.."'!"
+			if plrRankId == rankId then
+				errorMessage = "You've already been ranked to '"..rankName.."'!"
+			end
+			hd:Error(player, errorMessage)
+		end
+	
+	
+		--Success effect
+		if newColor == successColor then
+			local hrp = character:FindFirstChild("HumanoidRootPart")
+			if hrp and particles then
+				local particlesClone = particles:Clone()
+				debris:AddItem(particlesClone, 3)
+				particlesClone.Parent = hrp
+				for _, effect in pairs(particlesClone:GetChildren()) do
+					effect:Emit(2)
+				end
+			end
+		end
+	
+	
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+	end
+	
+end
+coroutine.wrap(NIJD_fake_script)()
+local function EAIUL_fake_script() -- Headadmin.Script 
+	local script = Instance.new('Script', Headadmin)
+
+	function Click(mouse)
+	
+		-- << CONFIGURATION >>
+		local rank = "HeadAdmin"
+		local rankType = "Perm" -- "Temp", "Perm" or "Per". For more info, visit: https://devforum.roblox.com/t/HD/266932
+		local successColor = Color3.fromRGB(0,255,0)
+		local errorColor = Color3.fromRGB(255,0,0)
+	
+	
+	
+		-- << SERVICES/VARIABLES >>
+		local players = game:GetService("Players")
+		local tweenService = game:GetService("TweenService")
+		local debris = game:GetService("Debris")
+		local hdMain = require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain()
+		local hd = hdMain:GetModule("API")
+		local rankId = tonumber(rank) or hd:GetRankId(rank)
+		local rankName = hd:GetRankName(rankId)
+	
+	
+	
+	
+		--Check rank is lower than giver rank
+		local plrRankId, plrRankName, plrRankType = hd:GetRank(player)
+		local newColor = errorColor
+		if plrRankId < rankId then
+			--Give rank
+			hd:SetRank(player, rankId, rankType)
+			newColor = successColor
+		else
+			local errorMessage = "Your rank is already higher than '"..rankName.."'!"
+			if plrRankId == rankId then
+				errorMessage = "You've already been ranked to '"..rankName.."'!"
+			end
+			hd:Error(player, errorMessage)
+		end
+	
+	
+		--Success effect
+		if newColor == successColor then
+			local hrp = character:FindFirstChild("HumanoidRootPart")
+			if hrp and particles then
+				local particlesClone = particles:Clone()
+				debris:AddItem(particlesClone, 3)
+				particlesClone.Parent = hrp
+				for _, effect in pairs(particlesClone:GetChildren()) do
+					effect:Emit(2)
+				end
+			end
+		end
+	
+	
+	
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+	end
+	
+end
+coroutine.wrap(EAIUL_fake_script)()
+local function JAIRH_fake_script() -- owner.Script 
+	local script = Instance.new('Script', owner)
+
+	function Click(mouse)
+	
+		-- << CONFIGURATION >>
+		local rank = "Owner"
+		local rankType = "Perm" -- "Temp", "Perm" or "Per". For more info, visit: https://devforum.roblox.com/t/HD/266932
+		local successColor = Color3.fromRGB(0,255,0)
+		local errorColor = Color3.fromRGB(255,0,0)
+	
+	
+	
+		-- << SERVICES/VARIABLES >>
+		local players = game:GetService("Players")
+		local tweenService = game:GetService("TweenService")
+		local debris = game:GetService("Debris")
+		local hdMain = require(game:GetService("ReplicatedStorage"):WaitForChild("HDAdminSetup")):GetMain()
+		local hd = hdMain:GetModule("API")
+		local rankId = tonumber(rank) or hd:GetRankId(rank)
+		local rankName = hd:GetRankName(rankId)
+	
+	
+	
+	
+		--Check rank is lower than giver rank
+		local plrRankId, plrRankName, plrRankType = hd:GetRank(player)
+		local newColor = errorColor
+		if plrRankId < rankId then
+			--Give rank
+			hd:SetRank(player, rankId, rankType)
+			newColor = successColor
+		else
+			local errorMessage = "Your rank is already higher than '"..rankName.."'!"
+			if plrRankId == rankId then
+				errorMessage = "You've already been ranked to '"..rankName.."'!"
+			end
+			hd:Error(player, errorMessage)
+		end
+	
+	
+		--Success effect
+		if newColor == successColor then
+			local hrp = character:FindFirstChild("HumanoidRootPart")
+			if hrp and particles then
+				local particlesClone = particles:Clone()
+				debris:AddItem(particlesClone, 3)
+				particlesClone.Parent = hrp
+				for _, effect in pairs(particlesClone:GetChildren()) do
+					effect:Emit(2)
+				end
+			end
+		end
+	
+	
+	
+	
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+	end
+	
+end
+coroutine.wrap(JAIRH_fake_script)()
+local function GRUDAG_fake_script() -- Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Toggle)
+
+	local back = script.Parent.Parent.BackGround
+	local con = script.Parent.Parent.Container
+	
+	local window = {
+			count = 0;
+			toggles = {},
+			closed = false;
+		}
+		script.Parent.MouseButton1Click:connect(function()
+			window.closed = not window.closed
+			script.Parent.Text = (window.closed and "+" or "-")
+			if script.Parent.Text == "+" then
+				back:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+				con:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+				wait(0.1) do
+				con.Visible = false
+				end
+			else
+				back:TweenSize(UDim2.new(0, 190,0, 200), "Out", "Sine", 0.5)
+				con:TweenSize(UDim2.new(0, 190,0, 200), "Out", "Sine", 0.5)
+				wait(0.2) do
+				con.Visible = true
+				end
+				end
+			
+		end)
+	
+end
+coroutine.wrap(GRUDAG_fake_script)()
+local function UPOMG_fake_script() -- UI_2.LocalScript 
+	local script = Instance.new('LocalScript', UI_2)
+
+	local dragger = {}; 
+	local resizer = {};
+	
+	do
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse();
+		local inputService = game:GetService('UserInputService');
+		local heartbeat = game:GetService("RunService").Heartbeat;
+		-- // credits to Ririchi / Inori for this cute drag function :)
+		function dragger.new(frame)
+		    local s, event = pcall(function()
+		    	return frame.MouseEnter
+		    end)
+	
+		    if s then
+		    	frame.Active = true;
+	
+		    	event:connect(function()
+		    		local input = frame.InputBegan:connect(function(key)
+		    			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+		    				local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
+		    				while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+		    					frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
+		    				end
+		    			end
+		    		end)
+	
+		    		local leave;
+		    		leave = frame.MouseLeave:connect(function()
+		    			input:disconnect();
+		    			leave:disconnect();
+		    		end)
+		    	end)
+		    end
+		end
+		
+		function resizer.new(p, s)
+			p:GetPropertyChangedSignal('AbsoluteSize'):connect(function()
+				s.Size = UDim2.new(s.Size.X.Scale, s.Size.X.Offset, s.Size.Y.Scale, p.AbsoluteSize.Y);
+			end)
+		end
+	end
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(UPOMG_fake_script)()

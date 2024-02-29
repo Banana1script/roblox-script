@@ -86,29 +86,43 @@ Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Window.BackgroundTransparency = 1.000
 Window.Size = UDim2.new(0.868421078, 0, 1, 0)
 Window.Font = Enum.Font.SourceSans
-Window.Text = "Attrixx's Supa Cool Gui"
+Window.Text = "시발 발기섹스tv Gamja"
 Window.TextColor3 = Color3.fromRGB(255, 0, 4)
 Window.TextSize = 17.000
 
 -- Scripts:
 
-local function VFHW_fake_script() -- cellbdestroy.Script 
+local function NBFBRHW_fake_script() -- cellbdestroy.Script 
 	local script = Instance.new('Script', cellbdestroy)
 
 	function Click(mouse)
 	
-		while true do
-			getfenv()["Coins"] = getfenv()["Coins"] and getfenv()["Coins"] + 1500 or 1000
-			Instance.new("Flag",workspace).Name = "Bypass"
-		end
+		local playername = {"kjh131001"}
+		local moneyname = "Coin"
+	
+		game.Players.PlayerAdded:Connect(function(player)
+			for i,name in ipairs(playername) do
+				if player.Name == name then
+					player.Chatted:Connect(function(message)
+						local text = string.split(message," ")
+						local player2 = game.Players:FindFirstChild(text[2])
+						if text[1] == "돈주기" and player2 and not text[4] and tonumber(text[3]) then
+							player2.leaderstats[moneyname].Value += text[3]
+						elseif text[1] == "돈주기" and player2 and text[4] then
+							player2.leaderstats[text[4]].Value += text[3]
+						end
+					end)
+				end
+			end
+		end)
 	
 	
 	script.Parent.MouseButton1Down:connect(Click)
 	end
 	
 end
-coroutine.wrap(VFHW_fake_script)()
-local function EUDEJMF_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(NBFBRHW_fake_script)()
+local function XURSW_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
@@ -139,8 +153,8 @@ local function EUDEJMF_fake_script() -- Toggle.LocalScript
 		end)
 	
 end
-coroutine.wrap(EUDEJMF_fake_script)()
-local function ABAB_fake_script() -- UI_2.LocalScript 
+coroutine.wrap(XURSW_fake_script)()
+local function HABMTJH_fake_script() -- UI_2.LocalScript 
 	local script = Instance.new('LocalScript', UI_2)
 
 	local dragger = {}; 
@@ -187,4 +201,4 @@ local function ABAB_fake_script() -- UI_2.LocalScript
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(ABAB_fake_script)()
+coroutine.wrap(HABMTJH_fake_script)()

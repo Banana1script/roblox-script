@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/FByBWy8L'))()
+\local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/FByBWy8L'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Edawn Hub V1",

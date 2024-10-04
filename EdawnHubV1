@@ -90,7 +90,6 @@ local Input = MainTab:CreateInput({
 })
 
 
-local ScriptTab = Window:CreateTab("🎲 scripts", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("scripts")
 
 local Button = MainTab:CreateButton({
